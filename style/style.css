@@ -59,20 +59,62 @@ section {
 
 .sec1 {
   display: none;
-  transform: translateX(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .sec2 {
   display: none;
-  transform: translateX(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .sec3 {
   display: none;
-  transform: translateX(0) scale(1);
+  transform: translateY(0) scale(1);
 }
 
 .sec4 {
   display: none;
-  transform: translateX(0) scale(1);
+  transform: translateY(0) scale(1);
+}
+
+.sec5 {
+  display: none;
+  transform: translateY(0) scale(1);
+}
+
+.controlls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+.controlls .active-btn {
+  background-color: var(--color-secondary) !important;
+  transition: all 0.4s ease-in-out;
+}
+.controlls .active-btn i {
+  color: var(--color-white) !important;
+}
+.controlls .control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey-4);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: var(--box-shadow-1);
+}
+.controlls .control i {
+  font-size: 1.2rem;
+  color: var(--color-grey-2);
+  pointer-events: none;
 }/*# sourceMappingURL=style.css.map */
