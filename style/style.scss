@@ -184,7 +184,14 @@ section {
   padding-top: 3.5rem;
   padding-bottom: 5rem;
   .left-about {
-    padding-left: 3px;
+    padding-right: 5rem;
+    p{
+      line-height: 2rem;
+    }
+    h4{
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
   }
   .right-about {
     display: grid;

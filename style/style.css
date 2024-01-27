@@ -196,7 +196,14 @@ section {
   padding-bottom: 5rem;
 }
 .about-container .left-about {
-  padding-left: 3px;
+  padding-right: 5rem;
+}
+.about-container .left-about p {
+  line-height: 2rem;
+}
+.about-container .left-about h4 {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 .about-container .right-about {
   display: grid;
