@@ -9,62 +9,62 @@
     <script>
 
 
-        var TxtType = function(el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
+        var TxtType = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
 
-    TxtType.prototype.tick = function() {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
+        TxtType.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
 
-        if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-        }
-
-        setTimeout(function() {
-        that.tick();
-        }, delta);
-    };
-
-    window.onload = function() {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i=0; i<elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-              new TxtType(elements[i], JSON.parse(toRotate), period);
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
             }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+            document.body.appendChild(css);
+        };
     </script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,25 +82,26 @@
             <div class="left-header">
                 <div class="h-shape"></div>
                 <div class="image">
-                        <img src="img/janath.png" alt="">
+                    <img src="img/janath.png" alt="">
                 </div>
             </div>
-            
+
             <div class="right-header">
-               
+
                 <h1 class="name">
                     <h1>
-                        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, Everyone Im Janath.", "I am Fullstack developer." ]'>
-                          <span class="wrap"></span>
+                        <a href="" class="typewrite" data-period="2000"
+                            data-type='[ "Hi, Everyone Im Janath.", "I am Fullstack developer." ]'>
+                            <span class="wrap"></span>
                         </a>
-                      </h1>
+                    </h1>
                 </h1>
                 <p>
                     |Full-stack Software Developer |Eager to apply tech skills in real-world scenarios| Open to
                     collaboration, networking for innovative opportunities in software
                 </p>
-                <div class="cube-container" >
-                    <div class="cube"  id="cube">
+                <div class="cube-container">
+                    <div class="cube" id="cube">
                         <div class="face front"><img class="img" src="img/react.png" alt=""></div>
                         <div class="face back"><img class="img" src="img/spring.png" alt=""></div>
                         <div class="face right"><img class="img" src="img/angular.png" alt=""></div>
@@ -118,8 +119,8 @@
             </div>
         </div>
     </header>
-    
- 
+
+
     <main>
         <section class="container about" id="about">
             <div class="main-title">
@@ -129,13 +130,10 @@
                 <div class="left-about">
                     <h4>Information About me</h4>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eveniet labore nihil obcaecati consequatur. Debitis error doloremque,
-                        vero eos vel nemo eius voluptatem dicta tenetur modi. <br /> <br /> La musica
-                        delectus dolore fugiat exercitationem a,
-                        ipsum quidem quo enim natus accusamus labore dolores nam. Unde.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Harum non necessitatibus deleniti eum soluta.
+                        Hello everyone, I'm Jannath. I'm currently working as a Trainee Software Engineer, where I've
+                        gained experience in various industrial practices such as Agile methodology, GitHub version
+                        control, and collaborative teamwork. I enjoy leveraging my programming skills and analytical
+                        thinking to devise sustainable solutions and design systems for real-world problems.
                     </p>
                     <div class="btn-con">
                         <a href="#" class="main-btn">
@@ -147,28 +145,28 @@
                 <div class="right-about">
                     <div class="about-item">
                         <div class="abt-text">
-                            <p class="large-text">650+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
+                            <p class="large-text">3</p>
+                            <p class="small-text">Individual project <br /><br />Use enterprise application development technology</p>
                         </div>
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
-                            <p class="large-text">10+</p>
-                            <p class="small-text">Years of <br /> experience</p>
+                            <p class="large-text">2</p>
+                            <p class="small-text">Group projects <br /><br /> Use enterprise application development technology</p>
                         </div>
                     </div>
                     <div class="about-item">
                         <div class="abt-text">
-                            <p class="large-text">300+</p>
-                            <p class="small-text">Happy <br /> Clients</p>
+                            <p class="large-text">2</p>
+                            <p class="small-text">API base project</p>
                         </div>
                     </div>
-                    <div class="about-item">
+                <!--     <div class="about-item">
                         <div class="abt-text">
                             <p class="large-text">400+</p>
                             <p class="small-text">Customer <br /> reviews</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="about-stats">
